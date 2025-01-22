@@ -1,5 +1,16 @@
-document.getElementById("get_element").innerHTML = "Muneeb";
+document.getElementById('get_element').innerHTML += "Muneeb";
+// Adding names and links to 'same_element'
+document.getElementById('same_element').innerHTML = "Aayan </br>";
+document.getElementById('same_element').innerHTML += `<a href="https://web.whatsapp.com/" target="_blank">WhatsApp</a></br>`;
+
+// Setting image source
 document.getElementById("img_id").src = "../images/stone.jpg";
-let BigParagraph =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla nihil aspernatur rem unde mollitia et quo, accusantium voluptatibus vitae blanditiis nam vero expedita sequi. Reprehenderit, quas corporis accusamus est voluptatibus incidunt, delectus veniam, id unde voluptatum fugit. Rerum labore officia modi consectetur. Totam et doloribus enim quaerat eveniet nisi iste culpa fugit rem, exercitationem id non earum sunt esse eos pariatur mollitia cum libero repellat obcaecati consectetur quisquam omnis! Numquam voluptate illum ex eveniet vel, quos quia quaerat inventore dicta placeat dolore debitis soluta quas magnam corporis neque aliquid modi repellat tempore accusantium praesentium laboriosam, esse asperiores voluptas. Fugit earum, officia quam dolor excepturi, aliquam molestias similique ipsam repudiandae tenetur omnis corrupti, dolore atque voluptatem natus? Nemo repellat expedita laudantium aliquam. Fugiat praesentium fugit adipisci tempore voluptatum odit vitae tempora enim, commodi ipsum nisi facilis unde velit totam sit sint doloribus. Illo quas, assumenda inventore, eius earum nam alias veritatis reprehenderit incidunt id rem ullam eos fugit cumque. Voluptatibus quia delectus, quo corrupti sint voluptate explicabo consectetur pariatur illo doloremque consequuntur eos. Optio eligendi sapiente illum, ex rerum porro amet reiciendis, unde tempore neque possimus qui consectetur earum laboriosam tenetur atque cupiditate officiis quo maxime! Magnam tempora neque, magni temporibus blanditiis porro, quam dolores nulla quaerat dicta eius quos provident quidem? Quas aliquid tempora dolorem quibusdam doloremque. Tenetur veritatis nostrum eius porro aut? Maiores aut assumenda debitis ducimus in saepe blanditiis praesentium deserunt iste soluta incidunt nulla, consequatur quos aperiam, cum modi molestiae beatae, nisi atque quidem eligendi. Soluta expedita voluptatem quam id non repudiandae. Nihil officiis maxime, labore distinctio quidem tempore. Ducimus exercitationem consequuntur impedit dolore corrupti. Recusandae ea aliquid beatae ratione facilis consequatur, ipsa culpa itaque illo explicabo nostrum, molestias voluptas. Qui cum necessitatibus culpa corporis aliquam quaerat, cumque incidunt iusto! Tempora cupiditate cumque labore illum laborum!";
-document.getElementById("big_para").innerHTML = BigParagraph;
+
+// Repeating images in a container
+document.getElementById("img_container").innerHTML = `
+    <img src="../images/Birds.webp" alt="Stone Image" width="250px" />
+    <img src="../images/Birds.webp" alt="Stone Image" width="250px" />`;
+
+// Adding a paragraph
+let paragraph = "This is a paragraph.";
+document.getElementById('big_para').innerHTML = paragraph;

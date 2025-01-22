@@ -15,7 +15,7 @@ document.getElementById("Modulus").innerHTML=("Modulus    30%20 = " +  (30%2) + 
     let post_Increment = 100;
     let post_Decrement =100
     let pre_Increment = 100;
-    let pre_Decrement =100
+    let pre_Decrement =100 
 document.write(" post_Increment  = " +  (post_Increment++) + ('</br>'));
 document.write(" post_Decrement = " +  ( post_Decrement--) + ('</br>'));
 document.write("pre_Increment   = " +  (++pre_Increment ) + ('</br>'));
