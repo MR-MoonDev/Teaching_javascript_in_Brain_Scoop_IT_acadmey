@@ -7,30 +7,30 @@
 // **=	x **= y	x = x ** y
 
 let equal = 20;
-document.getElementById("equal").innerHTML = "equal " + equal;
+document.getElementById("assigment").innerHTML += ("equal " + (equal)+"</br>")
 
 let plusEqual = (equal += 1);
 
-document.getElementById("plusEqual").innerHTML = "plusEqual " + plusEqual;
+document.getElementById("assigment").innerHTML += ("plusEqual " + (plusEqual)+"</br>")
 
 let minusEqual = (equal -= 1);
 
-document.getElementById("minusEqual").innerHTML = "minusEqual " + minusEqual;
+document.getElementById("assigment").innerHTML += ("minusEqual " + (minusEqual)+"</br>")
 
 let multiplyEqual = (equal *= 1);
 
-document.getElementById("multiplyEqual").innerHTML =
-  "multiplyEqual " + multiplyEqual;
+document.getElementById("assigment").innerHTML +=
+(  "multiplyEqual " + (multiplyEqual)+"</br>")
 
 let divideEqual = (equal /= 1);
 
-document.getElementById("divideEqual").innerHTML = "divideEqual " + divideEqual;
+document.getElementById("assigment").innerHTML += ("divideEqual " + (divideEqual)+"</br>")
 
 let modulusEqual = (equal %= 1);
 
-document.getElementById("modulusEqual").innerHTML =
-  "modulusEqual " + modulusEqual;
+document.getElementById("assigment").innerHTML +=
+(  "modulusEqual " + (modulusEqual)+"</br>")
 
 let sqaureEqual = (equal **= 1);
 
-document.getElementById("sqaureEqual").innerHTML = "sqaureEqual " + sqaureEqual;
+document.getElementById("assigment").innerHTML += ("sqaureEqual " + (sqaureEqual)+"</br>")

@@ -1,16 +1,16 @@
 //  witout declare
 
 name = "Muneeb";
-document.getElementById("name").innerHTML = name;
+document.getElementById("variable").innerHTML = name+"</br>";
 
 //  var declare
 var var_name = "Var Muneeb";
-document.getElementById("var_name").innerHTML = var_name;
+document.getElementById("variable").innerHTML += var_name+"</br>";
 
 // let declare
 let let_name = "Let Muneeb";
-document.getElementById("let_name").innerHTML = let_name;
+document.getElementById("variable").innerHTML += let_name+"</br>";
 
 // const declare
 const fix_name = "Constant Muneeb"
-document.getElementById("const_name").innerHTML = fix_name;
+document.getElementById("variable").innerHTML += fix_name+"</br>";

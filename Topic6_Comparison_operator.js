@@ -1,71 +1,61 @@
 // Equality (==)
-console.log("Equality (==)");
-console.log(5 == "5"); // true
-console.log(0 == false); // true
-console.log(null == undefined); // true
+document.getElementById("comparision").innerHTML = "Equality (==)<br>";
+document.getElementById("comparision").innerHTML += (5 == "5") + "<br>"; // true
+document.getElementById("comparision").innerHTML += (0 == false) + "<br>"; // true
+document.getElementById("comparision").innerHTML += (null == undefined) + "<br>"; // true
 
 // Strict Equality (===)
-
-console.log("Strict Equality (===)");
-console.log(5 == "5"); // true
-console.log(0 == false); // true
-console.log(null == undefined); // true
+document.getElementById("comparision").innerHTML += "Strict Equality (===)<br>";
+document.getElementById("comparision").innerHTML += (5 === "5") + "<br>"; // false
+document.getElementById("comparision").innerHTML += (0 === false) + "<br>"; // false
+document.getElementById("comparision").innerHTML += (null === undefined) + "<br>"; // false
 
 // Inequality (!=)
-
-console.log("Inequality (!=)");
-console.log(5 != "5"); // false
-console.log(5 != 6); // true
-console.log(false != 0); // false
+document.getElementById("comparision").innerHTML += "Inequality (!=)<br>";
+document.getElementById("comparision").innerHTML += (5 != "5") + "<br>"; // false
+document.getElementById("comparision").innerHTML += (5 != 6) + "<br>"; // true
+document.getElementById("comparision").innerHTML += (false != 0) + "<br>"; // false
 
 // Strict Inequality (!==)
-
-console.log("Strict Inequality (!==)");
-console.log(5 !== "5"); // true
-console.log(5 !== 5); // false
-console.log(false !== 0); // true
+document.getElementById("comparision").innerHTML += "Strict Inequality (!==)<br>";
+document.getElementById("comparision").innerHTML += (5 !== "5") + "<br>"; // true
+document.getElementById("comparision").innerHTML += (5 !== 5) + "<br>"; // false
+document.getElementById("comparision").innerHTML += (false !== 0) + "<br>"; // true
 
 // Greater Than (>)
-
-console.log(" Greater Than (>)");
-console.log(10 > 5); // true
-console.log(5 > 10); // false
+document.getElementById("comparision").innerHTML += "Greater Than (>)<br>";
+document.getElementById("comparision").innerHTML += (10 > 5) + "<br>"; // true
+document.getElementById("comparision").innerHTML += (5 > 10) + "<br>"; // false
 
 // Greater Than or Equal To (>=)
-
-console.log("Greater Than or Equal To (>=)");
-console.log(10 >= 5); // true
-console.log(5 >= 5); // true
-console.log(4 >= 5); // false
+document.getElementById("comparision").innerHTML += "Greater Than or Equal To (>=)<br>";
+document.getElementById("comparision").innerHTML += (10 >= 5) + "<br>"; // true
+document.getElementById("comparision").innerHTML += (5 >= 5) + "<br>"; // true
+document.getElementById("comparision").innerHTML += (4 >= 5) + "<br>"; // false
 
 // Less Than (<)
-
-console.log("Less Than (<)");
-console.log(5 < 10); // true
-console.log(10 < 5); // false
+document.getElementById("comparision").innerHTML += "Less Than (<)<br>";
+document.getElementById("comparision").innerHTML += (5 < 10) + "<br>"; // true
+document.getElementById("comparision").innerHTML += (10 < 5) + "<br>"; // false
 
 // Less Than or Equal To (<=)
-
-console.log("Less Than or Equal To (<=)");
-console.log(5 <= 10); // true
-console.log(5 <= 5); // true
-console.log(6 <= 5); // false
+document.getElementById("comparision").innerHTML += "Less Than or Equal To (<=)<br>";
+document.getElementById("comparision").innerHTML += (5 <= 10) + "<br>"; // true
+document.getElementById("comparision").innerHTML += (5 <= 5) + "<br>"; // true
+document.getElementById("comparision").innerHTML += (6 <= 5) + "<br>"; // false
 
 // Comparison with NaN
-
-console.log("Comparison with NaN");
-console.log(NaN == NaN); // false
-console.log(Number.isNaN(NaN)); // true
+document.getElementById("comparision").innerHTML += "Comparison with NaN<br>";
+document.getElementById("comparision").innerHTML += (NaN == NaN) + "<br>"; // false
+document.getElementById("comparision").innerHTML += (Number.isNaN(NaN)) + "<br>"; // true
 
 // Comparison with null and undefined
-
-console.log("Comparison with null and undefined");
-console.log(null == undefined); // true
-console.log(null === undefined); // false
+document.getElementById("comparision").innerHTML += "Comparison with null and undefined<br>";
+document.getElementById("comparision").innerHTML += (null == undefined) + "<br>"; // true
+document.getElementById("comparision").innerHTML += (null === undefined) + "<br>"; // false
 
 // Chaining Comparisons
-
-console.log("Chaining Comparisons");
+document.getElementById("comparision").innerHTML += "Chaining Comparisons<br>";
 let x = 10;
-console.log(x > 5 && x < 15); // true
-console.log(x < 5 || x > 15); // false
+document.getElementById("comparision").innerHTML += (x > 5 && x < 15) + "<br>"; // true
+document.getElementById("comparision").innerHTML += (x < 5 || x > 15) + "<br>"; // false

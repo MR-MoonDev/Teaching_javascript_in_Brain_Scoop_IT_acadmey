@@ -1,4 +1,4 @@
-document.getElementById('get_element').innerHTML += "Muneeb";
+document.getElementById('get_element').innerHTML = "Muneeb";
 // Adding names and links to 'same_element'
 document.getElementById('same_element').innerHTML = "Aayan </br>";
 document.getElementById('same_element').innerHTML += `<a href="https://web.whatsapp.com/" target="_blank">WhatsApp</a></br>`;
