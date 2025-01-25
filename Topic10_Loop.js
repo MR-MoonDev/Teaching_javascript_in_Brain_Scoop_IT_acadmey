@@ -1,4 +1,3 @@
-
 for (let i = 1; i <= 3; i++) {
     document.getElementById("loop").innerHTML += (`for loop answer = ${i}</br>`)
 
