@@ -1,17 +1,17 @@
 for (let i = 1; i <= 3; i++) {
     document.getElementById("loop").innerHTML += (`for loop answer = ${i}</br>`)
-
 }
 
 let i = 1
 while(i <= 3){
-    document.getElementById("loop").innerHTML += (`for while answer = ${i}</br>`)
+    document.getElementById("loop").innerHTML += (`for while ans is ${i}`)
        i++;
 }
+
  
 let j = 1;
 do{
-    document.getElementById("loop").innerHTML += (`for dowhile answer = ${j}</br>`)
+    document.getElementById("loop").innerHTML += (` do while answer = ${j}</br>`)
     j++
 }while(j <= 3)
 
