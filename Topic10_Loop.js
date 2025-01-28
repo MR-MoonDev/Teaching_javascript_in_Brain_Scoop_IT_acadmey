@@ -4,7 +4,7 @@ for (let i = 1; i <= 3; i++) {
 
 let i = 1
 while(i <= 3){
-    document.getElementById("loop").innerHTML += (`for while ans is ${i}`)
+    document.getElementById("loop").innerHTML += (` while ans is ${i}</br>`)
        i++;
 }
 
