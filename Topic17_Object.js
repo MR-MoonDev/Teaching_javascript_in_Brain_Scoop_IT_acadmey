@@ -10,8 +10,8 @@ document.getElementById("object").innerHTML +=Object.keys(object_name) + "<br>";
 document.getElementById("object").innerHTML +=Object.entries(object_name) + "<br>";
 
 const fun_in_Object = {
-  key1: "funtion in Object value1 ",
-  key2: "funtion in Object value2 ",
+  key1: "function in Object value1 ",
+  key2: "function in Object value2 ",
   key3: function () {
     return (document.getElementById("fun_in_object").innerHTML +=
       this.key1 + this.key2 +  "<br>");
