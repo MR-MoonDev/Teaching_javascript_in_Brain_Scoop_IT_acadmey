@@ -23,4 +23,16 @@ if (name) {
     document.getElementById("popup_fun").innerHTML+=("No name entered")
 
 }
+//   Prompt Table
 
+let table_num = prompt("Enter Table Number")
+for (let i = 1; i <= 10; i++) {
+    document.getElementById("popup_fun").innerHTML+=(`${table_num} * ${i} = ${table_num * i}`+"</br>")
+}
+
+// leap year
+let year = prompt("Enter Year")
+if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    document.getElementById("popup_fun").innerHTML+=(`${year} is a Leap Year`)
+
+}
