@@ -69,3 +69,8 @@ number.sort(function(a, b) {
 });
 document.getElementById('array_method').innerHTML += (`${number}<br>`);
 
+// Map array
+let number2 = number.map(function(value) {
+    return value * 2;
+});
+document.getElementById('array_method').innerHTML += (`${number2}<br>`);

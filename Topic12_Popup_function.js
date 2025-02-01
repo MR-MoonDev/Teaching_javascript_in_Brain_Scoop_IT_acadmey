@@ -36,3 +36,16 @@ if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
     document.getElementById("popup_fun").innerHTML+=(`${year} is a Leap Year`)
 
 }
+
+// prime number
+let num = 1
+if(num === 1 || num === 0 || num < 0){
+    document.getElementById("popup_fun").innerHTML+=("1 is neither prime nor composite number")
+}else if(num > 1){ 
+    for(i = 2; i < num; i++){
+        if(num % i === 0){
+            document.getElementById("popup_fun").innerHTML+=(`${num} is not a prime number`)
+            break;
+        }
+    }
+}
