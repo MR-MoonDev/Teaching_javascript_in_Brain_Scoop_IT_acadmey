@@ -30,15 +30,15 @@ document.getElementById("textInput").addEventListener("input", function() {
 });
 
 // Keydown Event (Triggers when a key is pressed)
-document.getElementById("textInput").addEventListener("keydown", function(event) {
+document.getElementById("Triggers").addEventListener("keydown", function(event) {
   console.log("Key Pressed:", event.key);
-  document.getElementById("add_text_event_handle").textContent = event.key;
+  document.getElementById("Triggers_text").textContent = event.key;
 });
 
 // Keyup Event (Triggers when a key is released)
-document.getElementById("textInput").addEventListener("keyup", function(event) {
+document.getElementById("Triggers").addEventListener("keyup", function(event) {
   console.log("Key Released:", event.key);
-  document.getElementById("add_text_event_handle").textContent = event.key;
+  document.getElementById("Triggers_text").textContent = event.key;
 });
 
 
@@ -56,4 +56,12 @@ document.getElementById("textInput").addEventListener("blur", function() {
   document.getElementById("myForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevents form submission
     alert("Form Submitted!");
+});
+
+document.getElementById("parent").addEventListener("click", () => {
+  console.log("Parent clicked!");
+});
+
+document.getElementById("child").addEventListener("click", () => {
+  console.log("Child clicked!");
 });
