@@ -3,21 +3,17 @@ let fruit = ['apple', 'banana', 'cherry'];
 document.getElementById('array_method').innerHTML += (`${fruit}<br>`);
 
 // length of array
-
 document.getElementById('array_method').innerHTML += (`${fruit.length}<br>`);
 
 // add element to the start of array
-
 fruit.unshift('orange');
 document.getElementById('array_method').innerHTML += (`${fruit}<br>`);
 
 // add element to the end of array
-
 fruit.push('kiwi');
 document.getElementById('array_method').innerHTML += (`${fruit}<br>`);
 
 // add element to the middle of array
-
 fruit.splice(2, 0, 'mango');
 document.getElementById('array_method').innerHTML += (`${fruit}<br>`);
 
@@ -34,7 +30,6 @@ fruit.splice(2, 1);
 document.getElementById('array_method').innerHTML += (`${fruit}<br>`);
 
 // find index of element
-
 let index = fruit.indexOf('banana');
 document.getElementById('array_method').innerHTML += (`${index}<br>`);
 
@@ -74,3 +69,15 @@ let number2 = number.map(function(value) {
     return value * 2;
 });
 document.getElementById('array_method').innerHTML += (`${number2}<br>`);
+
+// Filter array
+let number3 = number.filter(function(value) {
+    return value > 2;
+});
+document.getElementById('array_method').innerHTML += (`${number3}<br>`);
+
+// Reduce array 
+let sum = number.reduce(function(total, value) {
+    return total + value;
+});
+document.getElementById('array_method').innerHTML += (`${sum}<br>`);

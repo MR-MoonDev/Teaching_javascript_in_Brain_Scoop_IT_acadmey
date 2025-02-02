@@ -1,0 +1,7 @@
+// setTimeout(fn, ms)	Delays function execution	setTimeout(() => console.log("Hi"), 1000)
+// setInterval(fn, ms)	Repeats function every ms	setInterval(() => console.log("Hello"), 1000)
+// clearTimeout(id)	Stops a timeout	clearTimeout(timeoutID)
+// clearInterval(id)	Stops an interval	clearInterval(intervalID)
+// alert(msg)	Shows alert box	alert("Hello!")
+// prompt(msg)	Gets user input	prompt("Enter your name")
+// confirm(msg)	Shows Yes/No box	confirm("Are you sure?")
