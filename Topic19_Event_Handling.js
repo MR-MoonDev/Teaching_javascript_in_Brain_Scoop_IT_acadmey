@@ -58,6 +58,7 @@ document.getElementById("textInput").addEventListener("blur", function() {
     alert("Form Submitted!");
 });
 
+//  Bubble Event and Capture Event
 document.getElementById("parent").addEventListener("click", () => {
   console.log("Parent clicked!");
 });
