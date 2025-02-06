@@ -1,120 +1,115 @@
-Asyn = document.getElementById("asynchronous");
+// call back in Asyncronous
 
-//Synchronous
-
-Asyn.innerHTML += "Start <br>";
-for (let i = 0; i <= 3; i++) {
-  Asyn.innerHTML += i + "<br>";
+function task1(callback) {
+  document.getElementById("callback_Id").innerHTML = "Task One Done<br>"
+  setTimeout(callback, 2000);
 }
 
-Asyn.innerHTML += "End<br><br>";
+function task2() {
+  document.getElementById("callback_Id").innerHTML += "Task Two Done<br>"
+}
 
-// Asynchronous
+task1(task2)
 
-Asyn.innerHTML += "Start <br>";
+// call back hell
 
-setTimeout(() => {
-  Asyn.innerHTML += "Middle<br><br>";
-}, 2000);
 
-Asyn.innerHTML += "End<br>";
-
-// call back in Asynchronous
-
-function fetchdata(callback) {
+function task3(callback) {
   setTimeout(() => {
-    Asyn.innerHTML += "Hi ";
-    callback("Muneeb  ");
+  document.getElementById("callback_Id").innerHTML += "Task 3 Done<br>";
+      callback();
+  }, 5000);
+}
+
+function task4(callback) {
+  document.getElementById("callback_Id").innerHTML += "Task 4 Done<br>";
+  setTimeout(() => {
+      callback();
+  }, 5000);
+}
+
+function task5() {
+  document.getElementById("callback_Id").innerHTML += "Task 5 Done<br>";
+}
+
+task3(()=>{
+  task4(()=>{
+    task5()
+  })
+})
+
+
+
+//  Promises 
+
+let mypromise = new Promise((resolve, reject) => {
+  document.getElementById("callback_Id").innerHTML += "Promise initialize<br>"
+
+  setTimeout(() => {
+    let promise = true;
+    if (promise) {
+      resolve("promise Successful<br>")
+    } else {
+      reject("promise Rejection<br>")
+    }
+  }, 3000)
+})
+
+mypromise.then(result => {
+  document.getElementById("callback_Id").innerHTML += result + '<br>';
+})
+  .catch(error => {
+    document.getElementById("callback_Id").innerHTML += error + '<br>';
+  });
+
+// Chaining Promises
+
+let myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Step 1: Data Fetched");
   }, 2000);
-}
-
-function f1_callback() {
-  Asyn.innerHTML += "Areeb <br> ";
-}
-
-fetchdata(f1_callback);
-
-// pass parameter in Asynchronous
-
-function f2_callback(name) {
-  Asyn.innerHTML += name;
-}
-fetchdata(f2_callback);
-
-let promise_id = document.getElementById("promise");
-
-var promise = new Promise((resolve, reject) => {
-  promise_id.innerHTML += "Succsessful<br>";
-  resolve(promise_id);
-  promise_id.innerHTML += "reject<br>";
-  reject(promise_id);
 });
 
-// promises with then and catch
-
-var order = document.getElementById("promise");
-
-function Book_order(category) {
-  return new Promise((resolve, reject) => {
-    order.innerHTML += "sir wait your Order is cheak<br>";
-    setTimeout(() => {
-      if (category === "English" || category === "Urdu") {
-        let successMessage = `✅ Your ${category} Book is ready!<br>`;
-        resolve(successMessage); // ✅ Resolve with a message
-      } else {
-        let errorMessage = "❌ Sorry, we don't have that Book.<br>";
-        reject(errorMessage); // ✅ Reject with a message
-      }
-    }, 4000);
-  });
-}
-Book_order("Urdu")
-  .then((message) => {
-    order.innerHTML += message + "<br>";
-  })
-  .catch((error) => {
-    order.innerHTML += error + "<br>";
-  });
-
-// chaning in promises
-
-function functionOne(number) {
-  return new Promise((resolve, reject) => {
-    order.innerHTML += "Fetching the Data One<br>";
-    setTimeout(() => {
-      if (number === 1) {
-        let successMessage = "Number is 1";
-        resolve(successMessage);
-      } else {
-        let errormsg = "Number is not 1";
-        reject(errormsg);
-      }
-    }, 5000);
-  });
-}
-function functionTwo(number) {
-  return new Promise((resolve, reject) => {
-    order.innerHTML += "Fetching the Data Two<br>";
-    setTimeout(() => {
-      if (number === 2) {
-        let successMessage = "Number is 2";
-        resolve(successMessage);
-      } else {
-        let errormsg = "Number is not 2";
-        reject(errormsg);
-      }
-    }, 5000);
-  });
-}
-
-functionOne(1)
-  .then((message) => {
-    order.innerHTML += message + "<br>";
-    let fun2 = functionTwo(2);
-    fun2.then((message) => {
-      order.innerHTML += message + "<br>";
+myPromise
+  .then(step1 => {
+    document.getElementById("result").innerHTML += step1+"<br>";
+    return new Promise(resolve => {
+      setTimeout(() => resolve("Step 2: Data Processed"), 2000);
     });
   })
-  .catch((error) => {
-    order.innerHTML += error + "<br>";
+  .then(step2 => {
+    document.getElementById("result").innerHTML += step2+"<br>";
+    return new Promise(resolve => {
+      setTimeout(() => resolve("Step 3: Data Saved"), 2000);
+    });
+  })
+  .then(step3 => {
+    document.getElementById("result").innerHTML += step3+"<br>";
+  })
+  .catch(error => {
+    document.getElementById("result").innerHTML += error+"<br>";
   });
+
+
+  // asyn await
+
+  function delayMessage(message, time) {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(message), 5000);
+    });
+}
+
+// Async function
+async function performTasks() {
+    const result1 = await delayMessage("Asyn  Task 1: Data Fetched", 2000);
+    document.getElementById("asynID").innerHTML = result1;
+    
+    const result2 = await delayMessage("Asyn  Task 2: Data Processed", 2000);
+    document.getElementById("asynID").innerHTML += "<br>" + result2;
+    
+    const result3 = await delayMessage("Asyn  Task 3: Data Saved", 2000);
+    document.getElementById("asynID").innerHTML += "<br>" + result3;
+}
+
+// Call the async function
+performTasks();Asyn  
