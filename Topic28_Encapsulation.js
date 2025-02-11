@@ -8,9 +8,23 @@ class psw{
     }
 
     getpw(){
-        return this.#pw
+      let  print_text  =  variable.innerHTML += this.#pw+"<br>";    
+        return print_text
     }
+    setpw(newpw){
+         this.#pw =newpw;
+    }   
 }
 
 const pw = new psw(22)
-variable.innerHTML += pw.getpw();
+pw.getpw()
+pw.getpw()
+// update password
+ pw.setpw(77)+"<br>";    
+ pw.getpw()+"<br>";    
+
+
+
+
+
+
