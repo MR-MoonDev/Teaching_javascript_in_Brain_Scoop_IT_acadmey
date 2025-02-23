@@ -34,3 +34,4 @@ document.getElementById("assigment").innerHTML +=
 let sqaureEqual = (equal **= 1);
 
 document.getElementById("assigment").innerHTML += ("sqaureEqual " + (sqaureEqual)+"</br>")
+

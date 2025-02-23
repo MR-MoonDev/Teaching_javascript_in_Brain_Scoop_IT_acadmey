@@ -5,6 +5,7 @@ document.getElementById("comparision").innerHTML += (0 == false) + "<br>"; // tr
 document.getElementById("comparision").innerHTML += (null == undefined) + "<br>"; // true
 
 // Strict Equality (===)
+
 document.getElementById("comparision").innerHTML += "Strict Equality (===)<br>";
 document.getElementById("comparision").innerHTML += (5 === "5") + "<br>"; // false
 document.getElementById("comparision").innerHTML += (0 === false) + "<br>"; // false
